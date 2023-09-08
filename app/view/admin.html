@@ -1,0 +1,25 @@
+<div id="conteudo">
+    <section>
+        <h1>Gerenciador de Conteudo</h1>
+        <article>
+           <a href="index.php?pagina=Admin&metodo=create">Criar Postagem</a>
+        </article>
+        <hr> <br>
+        <table border="2">
+            <tr>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Alteração</th>
+                <th>Deleção</th>
+            </tr>
+            {% for postagem in postagens %}
+            <tr>
+                <th>{{postagem.id}}</th>
+                <th>{{postagem.titulo}}</th>
+                <th><a href="index.php?pagina=Admin&metodo=change&id={{postagem.id}}">Alteração</a></th>
+                <th><a href="index.php?pagina=Admin&metodo=delete&id={{postagem.id}}">Deleção</a></th>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+</div>
