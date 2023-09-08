@@ -41,6 +41,7 @@
                 throw new Exception("nao foi encontrado postagem");
             }else{
                 $resultado->comentario = comentario::selecionarComentario($resultado->id);
+
                 
             }
 

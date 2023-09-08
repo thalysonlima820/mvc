@@ -9,6 +9,7 @@ require_once 'app/controller/ErroController.php';
 require_once 'app/controller/PostController.php';
 require_once 'app/controller/SobreController.php';
 require_once 'app/controller/AdminController.php';
+require_once 'app/controller/ComentarioController.php';
 
 require_once 'app/model/postagem.php';
 require_once 'app/model/comentario.php';

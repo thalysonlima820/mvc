@@ -1,0 +1,26 @@
+<div id="conteudo">
+    <section>
+        <h1>Criar Comentario</h1>
+        <article>
+           <a href="index.php?pagina=Comentario&metodo=create&id={{id}}">Criar comentario</a>
+        </article>
+        <hr> <br>
+        <table border="2">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Alteração</th>
+                <th>Deleção</th>
+            </tr>
+            {% for postagem in comentario %}
+            <tr>
+                <th>{{postagem.id}}</th>
+                <th>{{postagem.nome}}</th>
+                <th><a href="index.php?pagina=Comentario&metodo=change&id={{postagem.id}}">Alteração</a></th>
+                <th><a href="index.php?pagina=Comentario&metodo=delete&id={{postagem.id}}">Deleção</a></th>
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </section>
+</div>

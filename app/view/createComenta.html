@@ -1,0 +1,16 @@
+<div id="conteudo">
+    <section>
+        <h1>Criar comentario</h1>
+        <form action="?pagina=Comentario&metodo=insert" method="post">
+            <span>Nome</span><br>
+            <input type="text" name="nome"><br><br>
+
+            <Span>Comentario</Span><br>
+            <textarea cols="25" rows="10" name="mensagem"></textarea><br><br>
+
+            <input type="hidden" name="id" value="{{id}}">
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</div>

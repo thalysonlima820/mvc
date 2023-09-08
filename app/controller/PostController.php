@@ -16,6 +16,7 @@ class PostController
             $template = $twig->load('single.html');
 
             $paramentos = array();
+            $paramentos['id'] = $postagem->id;
             $paramentos['titulo'] = $postagem->titulo;
             $paramentos['conteudo'] = $postagem->conteudo;
             $paramentos['comentario'] = $postagem->comentario;
