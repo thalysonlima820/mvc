@@ -39,7 +39,7 @@
                 comentario::insert($_POST);
     
                 echo '<script> alert("sucesso"); </script>';
-                echo '<script> location.href="http://localhost/mvc/index.php?pagina=Comentario&metodo=index&id={{id}}" </script>';
+                echo '<script> location.hrbgtef="http://localhost/mvc/index.php?pagina=Comentario&metodo=index&id={{id}}" </script>';
     
             } catch (Exception $e) {
                 echo '<script> alert("' .$e->getMessage() .'"); </script>';
