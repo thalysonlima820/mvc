@@ -21,23 +21,7 @@ use Illuminate\Support\Arr;
 
             return $resultado;
         }
-        public static function selecionarTodosComentario()
-        {
-            $con = connection::GetConn();
-
-            $sql = "SELECT * FROM comentario";
-            $sql = $con->prepare($sql);
-            $sql->execute();
-
-            $resultado = array();
-
-            while($row = $sql->fetchObject('comentario')){
-                $resultado[] = $row;
-            }
-
-            return $resultado;
-        }
-
+       
         public static function insert($dadosPost)
         {
           

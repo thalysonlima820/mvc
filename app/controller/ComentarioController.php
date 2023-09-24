@@ -5,7 +5,7 @@
         public function index($id)
         {
             
-            $comentario = comentario::selecionarTodosComentario();
+            $comentario = comentario::selecionarComentario($id);
 
             $loader = new \Twig\Loader\FilesystemLoader('app/view');
             $twig = new \Twig\Environment($loader);
