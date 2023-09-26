@@ -1,4 +1,5 @@
 <?php
+namespace Thaly\mvc\app\core;
 
 class core
 {

@@ -1,6 +1,9 @@
 
 <?php
 
+
+use Thaly\mvc\app\model\postagem;
+
 class HomeController
 {
     public function index()

@@ -25,6 +25,7 @@ use Illuminate\Support\Arr;
         public static function insert($dadosPost)
         {
           
+            $
 
             $con = connection::GetConn();
             

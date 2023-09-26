@@ -1,6 +1,12 @@
 {
-    "require": {
-        "laravel/framework": "^8.0",
-        "twig/twig": "^3.7"
-    }
+    "name": "thaly/mvc",
+    "autoload": {
+        "psr-4": {
+            "Thaly\\mvc\\": "app/",
+            "Thaly\\mvc\\app\\controller\\": "app/controller/",
+            "Thaly\\mvc\\app\\model\\": "app/model/",
+            "Thaly\\mvc\\app\\lib\\database\\": "app/lib/database/"
+        }
+    },
+    "require": {}
 }
