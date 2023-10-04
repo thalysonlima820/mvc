@@ -1,12 +1,15 @@
 <?php
-namespace Thaly\mvc\app\model;
-use Thaly\mvc\app\model\lib\database\connection;
+namespace app\model;
+use app\lib\database\connection;
+use app\model\comentario;
+use Exception;
+use PDO;
     class postagem
     {
         // private $id;
         public static function SelecionarTodos()
         {
-            $con = connection::GetConn();
+            $con = Connection::getConnection();
 
             $sql = "SELECT * FROM postagem ORDER BY id DESC";
             $sql = $con->prepare($sql);
@@ -29,7 +32,7 @@ use Thaly\mvc\app\model\lib\database\connection;
             // pegar o arquivo para lançar
         public static function selecionarPostId($idpost)
         {
-            $con = connection::GetConn();
+            $con = Connection::getConnection();
 
             $sql = "SELECT * FROM postagem WHERE id = :id";
             $sql = $con->prepare($sql);
@@ -67,8 +70,8 @@ use Thaly\mvc\app\model\lib\database\connection;
                 return false;
             }
         
-            $con = connection::GetConn();
-        
+            $con = Connection::getConnection();
+
             $sql = $con->prepare('INSERT INTO postagem (titulo, conteudo) VALUES (:titu, :cont)');
             $sql->bindValue(':titu', $titulo);
             $sql->bindValue(':cont', $conteudo);
@@ -85,7 +88,7 @@ use Thaly\mvc\app\model\lib\database\connection;
 
         public static function update($id)
         {   
-            $con = connection::GetConn();
+            $con = Connection::getConnection();
 
             $sql = "UPDATE postagem SET titulo = :tit, conteudo = :con WHERE id = :id";
             $sql =$con->prepare($sql);
@@ -106,7 +109,7 @@ use Thaly\mvc\app\model\lib\database\connection;
 
         public static function delete($id)
         {
-            $con = connection::GetConn();
+            $con = Connection::getConnection();
 
             $sql = "DELETE FROM postagem WHERE id = :id";
             $sql =$con->prepare($sql);

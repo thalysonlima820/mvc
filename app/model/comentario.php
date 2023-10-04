@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Support\Arr;
+namespace app\model;
+use app\lib\database\connection;
+use Exception;
+use PDO;
 
     class comentario
     {

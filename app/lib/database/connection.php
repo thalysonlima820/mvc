@@ -1,20 +1,30 @@
 <?php
-phpinfo();
-namespace Thaly\mvc\app\lib\database;
+namespace app\lib\database;
 
-    abstract class connection
+use PDO;
+use PDOException;
+
+class Connection
+{
+    private static $conn;
+    
+    public static function getConnection()
     {
-        private static $conn;
-
-        public static function GetConn()
-        {
+        if (self::$conn === null) {
             try {
-                self::$conn = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+                // Substitua esses valores pelas suas configurações reais
+                $host = 'localhost';
+                $dbname = 'test';
+                $username = 'root';
+                $password = '';
+                
+                self::$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+                self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
-                die('Erro de conexão: ' . $e->getMessage());
+                throw new \Exception('Erro de conexão: ' . $e->getMessage());
             }
-            
-            
-            return self::$conn;
         }
+        
+        return self::$conn;
     }
+}

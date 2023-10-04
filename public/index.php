@@ -1,11 +1,11 @@
 <?php
 
-use Thaly\mvc\app\core\core;
+use app\core\core;
 
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
-$templete = file_get_contents('app/template/estrutura.php');
+$templete = file_get_contents('../app/template/estrutura.php');
 
 ob_start();
 $core = new core;

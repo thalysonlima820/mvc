@@ -1,6 +1,6 @@
 <?php
-namespace Thaly\mvc\app\core;
 
+namespace app\core;
 class core
 {
         public function start($urlget)

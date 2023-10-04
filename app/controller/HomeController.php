@@ -1,9 +1,7 @@
-
 <?php
-
-
-use Thaly\mvc\app\model\postagem;
-
+namespace app\controller;
+use app\model\postagem;
+use Exception;
 class HomeController
 {
     public function index()

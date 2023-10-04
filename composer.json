@@ -2,10 +2,8 @@
     "name": "thaly/mvc",
     "autoload": {
         "psr-4": {
-            "Thaly\\mvc\\": "app/",
-            "Thaly\\mvc\\app\\controller\\": "app/controller/",
-            "Thaly\\mvc\\app\\model\\": "app/model/",
-            "Thaly\\mvc\\app\\lib\\database\\": "app/lib/database/"
+            "App\\": "App/",
+			"MF\\": "vendor/MF/"
         }
     },
     "require": {}
